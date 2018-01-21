@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.openhft.affinity.*;
+
 public class Main {
     /**
      * The port on which to listen
@@ -18,6 +20,7 @@ public class Main {
     private static final Map<String, String> map = new HashMap<>();
 
     public static void main(String[] args) throws IOException {
+        
         int port = PORT;
         if (args.length > 0) {
             port = Integer.parseInt(args[0]);
@@ -25,8 +28,14 @@ public class Main {
         ServerSocket listener = new ServerSocket(port);
 
         try {
+            int core = 0;
             while (true) {
-                new Server(listener.accept()).start();
+                try (AffinityLock al = AffinityLock.acquireLock(core)) {
+                    // do some work while locked to a CPU.
+                    new Server(listener.accept()).start();
+                }
+
+                core = (++core) % 4;
             }
         } finally {
             listener.close();
