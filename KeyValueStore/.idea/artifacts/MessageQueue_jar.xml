@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="MessageQueue:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/MessageQueue_jar</output-path>
     <root id="archive" name="MessageQueue.jar">
-      <element id="module-output" name="MessageQueue" />
+      <element id="module-output" name="KeyValueStore" />
     </root>
   </artifact>
 </component>
