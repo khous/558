@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MessageQueueClient.iml" filepath="$PROJECT_DIR$/MessageQueueClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KeyValueStoreClient.iml" filepath="$PROJECT_DIR$/KeyValueStoreClient.iml" />
     </modules>
   </component>
 </project>
