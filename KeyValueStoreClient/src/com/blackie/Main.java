@@ -12,14 +12,14 @@ public class Main {
         String message = args.length >= 3 ? args[2] : "";
 
         //Test code for stress test
-        for (int i = 0; i < 100000; i++) {
-            sendMessage(serverAddress, port, i + ":bitches");
-        }
-        for (int i = 0; i < 100000; i++) {
-            sendMessage(serverAddress, port, i + "");
-        }
+//        for (int i = 0; i < 100000; i++) {
+//            sendMessage(serverAddress, port, i + ":bitches");
+//        }
+//        for (int i = 0; i < 100000; i++) {
+//            sendMessage(serverAddress, port, i + "");
+//        }
 
-//        sendMessage(serverAddress, port, message);
+        sendMessage(serverAddress, port, message);
     }
 
     /**
