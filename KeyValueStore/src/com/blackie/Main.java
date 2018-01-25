@@ -18,9 +18,10 @@ public class Main {
      * The backing datastructure for the key value store
      */
     private static final Map<String, String> map = new HashMap<>();
+    private static final int NUM_CORES = 4;
 
     public static void main(String[] args) throws IOException {
-        
+
         int port = PORT;
         if (args.length > 0) {
             port = Integer.parseInt(args[0]);
@@ -35,7 +36,7 @@ public class Main {
                     new Server(listener.accept()).start();
                 }
 
-                core = (++core) % 4;
+                core = (++core) % NUM_CORES;
             }
         } finally {
             listener.close();
