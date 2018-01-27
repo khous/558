@@ -45,7 +45,7 @@ public class Main {
             System.out.println("Requesting\t\t" + message + "\t\tat " + (new Date()).toString());
             out.println(message);
             String response = in.readLine();
-            System.out.println("Received\t\t" + message + "\t\tat " + (new Date()).toString());
+            System.out.println("Received\t\t" + response + "\t\tat " + (new Date()).toString());
         }
 
     }
