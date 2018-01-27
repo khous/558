@@ -5,3 +5,8 @@ The message sent is in two formats
 
 The server begins by opening a listening socket on the specified port. As it receives requests, it spawns a new thread to handle that request.
 Core assignment is done on a round robin fashion per new thread.
+
+
+The server jar is called KeyValueStore.jar. It is located in the keyvaluestore folder in the directory out/artifactsKeyValueStore_jar/
+The client jar is called KeyValueStoreClient.jar. It is located in the keyvaluestoreclient folder in the directory out/artifactsKeyValueStoreClient_jar/
+
